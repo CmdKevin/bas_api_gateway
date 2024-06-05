@@ -1,0 +1,20 @@
+package main
+
+import (
+	"api_gateway/usecase"
+	"fmt"
+)
+
+func main() {
+
+	LoginAuth := usecase.NewLogin()
+
+	Username := "admin"
+	Password := "admin123"
+
+	if LoginAuth.Autentikasi(Username, Password) {
+		fmt.Println("Login Success")
+	} else {
+		fmt.Println("Login Failed)
+	}
+}
